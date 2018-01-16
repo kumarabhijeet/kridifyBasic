@@ -1,0 +1,65 @@
+.signupText {
+    background-color: #464b50;
+    width: 100%;
+    height: 750px;
+}
+
+.signupText .signup {
+    color: #fff;
+    font-size: 45px;
+    font-weight: 100;
+    margin-top: 0px;
+}
+
+.signupText p {
+    color: #fff;
+    letter-spacing: 0.1rem;
+    line-height: 2;
+}
+
+.signupText .addphotoClass {
+    border-radius: 50%;
+    font-size: 25px;
+    padding: 30px;
+    background: #464b50;
+    color: white;
+    border-color: #fff;
+    letter-spacing: 0.1rem;
+}
+
+.signupText .addPhotoButton {
+    margin-bottom: 20px;
+}
+
+.signupText .inputDiv {
+    margin-bottom: 20px;
+}
+
+.signupText .inputText {
+    text-align: center;
+    border-radius: 50px 50px 50px 50px;
+    width: 30%;
+    height: 65px;
+    border-color: #fff;
+    border-width: 1px;
+    font-size: 25px;
+    background: #464b50;
+    color: #fff;
+}
+
+.signupText .registerText {
+    text-align: center;
+    border-radius: 50px 50px 50px 50px;
+    width: 30%;
+    height: 65px;
+    border: none;
+    border-width: 1px;
+    font-size: 25px;
+    background: #26a95e;
+    color: #fff;
+    outline: none;
+}
+
+::placeholder {
+    color: #fff;
+}

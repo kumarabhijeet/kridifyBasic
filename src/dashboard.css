@@ -1,0 +1,7 @@
+.mainDiv {
+    background-image: url(./images/dashboard.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 850px;
+    width: 100%;
+    height: 600px;
+}

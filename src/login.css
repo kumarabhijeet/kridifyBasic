@@ -1,0 +1,90 @@
+.loginPage {
+    /*background-color: red;*/
+    width: 100%;
+    height: 600px;
+    background-image: url("./images/green2.png");
+    background-repeat: no-repeat;
+    background-size: 100% 850px;
+    opacity: 0.8;
+}
+
+.loginPage .welcome {
+    color: #fff;
+    font-size: 45px;
+    font-weight: 100;
+    margin-top: 0px;
+}
+
+.loginPage .loremText {
+    color: #fff;
+    letter-spacing: 0.1rem;
+    line-height: 2;
+}
+
+.loginPage .inputDiv {
+    margin-bottom: 20px;
+}
+
+.loginPage .inputText {
+    text-align: center;
+    border-radius: 50px 50px 50px 50px;
+    width: 30%;
+    height: 65px;
+    border-color: #fff;
+    border-width: 1px;
+    font-size: 25px;
+    background: none;
+    color: #fff;
+}
+
+.loginPage .loginText {
+    text-align: center;
+    border-radius: 50px 50px 50px 50px;
+    width: 30%;
+    height: 65px;
+    border: none;
+    border-width: 1px;
+    font-size: 25px;
+    background: #26a95e;
+    color: #fff;
+    outline: none;
+}
+
+.loginPage .loginText:hover {
+    cursor: pointer;
+}
+
+.loginPage .forgotText {
+    display: inline-block;
+    margin-right: 20px;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 100;
+    letter-spacing: 0.1rem;
+}
+
+.loginPage .forgotText:hover {
+    cursor: pointer;
+}
+
+.loginPage .registerText {
+    display: inline-block;
+    margin-left: 20px;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 100;
+    letter-spacing: 0.1rem;
+}
+
+.loginPage .registerText:hover {
+    cursor: pointer;
+}
+
+.loginPage span {
+    color: #fff;
+    font-size: 25px;
+}
+
+input:focus {
+    outline: none;
+}
