@@ -12,15 +12,19 @@ class Login extends React.Component {
         };
 
         this.finalSubmit = this.finalSubmit.bind(this);
-        this.handlechange = this.handlechange.bind(this);
     }
     clickOnRegister() {
         this.setState({
             loginLoading: true
         }, () => { this.props.onChangeValue(this.state.loginLoading) })
     }
-    
-    handlechange (data) {
+
+    finalSubmit(event) {
+        // let succes = false;
+        event.preventDefault();
+        // alert("loggggggin");
+        firebase.database().ref(`message`)
+            .on('value', function (data) {
                 console.log('----------------->', data.val())
                 var retrieveData = data.val();
                 var email = document.getElementById("loginEmailId").value;
@@ -36,36 +40,31 @@ class Login extends React.Component {
                     var finalPass = retrieveData[k].password;
                     console.log("firebase password....",finalPass)
                     if (finalEmail === email && finalPass === password) {
+                        this.setState({succes : true});
                         alert("final.....");
-                        this.setState({succes : true},() => {
-                            if (this.state.succes) {
-                                    alert("dashboard displayed....")
-                                    this.setState({
-                                        loginLoading3: true
-                                    })
-                                } else {
-                                    alert("dashboard not displayed....")
-                                    this.setState({
-                                        loginLoading3: false
-                                    })
-                                }
-                        });
                         break;
                     }
                     else {
                         this.setState({succes : false});
                         alert("login failed...")
+    
                     }
                 }
 
-            }
+            })
 
-    finalSubmit(event) {
-        // let succes = false;
-        event.preventDefault();
-        // alert("loggggggin");
-        firebase.database().ref(`message`)
-            .on('value',(x) => this.handlechange(x) )
+        if (this.state.succes) {
+            alert("dashboard displayed....")
+            this.setState({
+                loginLoading3: true
+            })
+        } else {
+            alert("dashboard not displayed....")
+            this.setState({
+                loginLoading3: false
+            })
+        }
+
     }
 
     render() {
